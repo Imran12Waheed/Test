@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MenuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Menu.dbo.DEF_MENUS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DEF_MENUS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="menu_Description" Type="varchar" MaxLength="300" />
+    <Property Name="menu_Parent" Type="int" />
+    <Property Name="menu_Name" Type="varchar" MaxLength="30" />
+    <Property Name="menu_Type" Type="varchar" MaxLength="50" />
+    <Property Name="menu_status" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityContainer Name="MenuModelStoreContainer">
+    <EntitySet Name="DEF_MENUS" EntityType="Self.DEF_MENUS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DEF_MENUS].[ID] AS [ID], 
+    [DEF_MENUS].[menu_Description] AS [menu_Description], 
+    [DEF_MENUS].[menu_Parent] AS [menu_Parent], 
+    [DEF_MENUS].[menu_Name] AS [menu_Name], 
+    [DEF_MENUS].[menu_Type] AS [menu_Type], 
+    [DEF_MENUS].[menu_status] AS [menu_status]
+    FROM [dbo].[DEF_MENUS] AS [DEF_MENUS]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

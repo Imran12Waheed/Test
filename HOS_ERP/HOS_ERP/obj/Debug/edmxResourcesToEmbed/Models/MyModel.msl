@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MenuModelStoreContainer" CdmEntityContainer="MenuEntities3">
+    <EntitySetMapping Name="DEF_MENUS">
+      <EntityTypeMapping TypeName="MenuModel.DEF_MENUS">
+        <MappingFragment StoreEntitySet="DEF_MENUS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="menu_Description" ColumnName="menu_Description" />
+          <ScalarProperty Name="menu_Parent" ColumnName="menu_Parent" />
+          <ScalarProperty Name="menu_Name" ColumnName="menu_Name" />
+          <ScalarProperty Name="menu_Type" ColumnName="menu_Type" />
+          <ScalarProperty Name="menu_status" ColumnName="menu_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
